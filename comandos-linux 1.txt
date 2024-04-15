@@ -1,0 +1,99 @@
+Comandos en linux
+
+cd Entrar a carpetas
+ls Listar directorios
+ ctrol + L Atajo para limpiar consola
+ls -l  Nos meuntras el archivo en bytes
+
+Usualmente la terminal guarda los primeros 1000 comandos
+
+ls -lh peso de archivos
+cd.. regreso a un directorio
+file "car" nos dice el tipo de archivo
+ls -la muestra todos los archivos incluso los ocultos
+ls -lr Lsta comandos de abajo a arriba
+ls - muetsra archivos en tipo de arbol
+ls -L muetra los archivos en Nivel
+
+"Manipulando Archivos"
+mkdir "Directorio" Nos crea un nuevo comando
+touch Crea archivos
+cp Copia archivos ponemos comando y como se va a llammar "cp fle_bk"
+mv file_bk Sirve para mover un archivo o directorio
+mv tambien nos srve para renombar archivos example mv file_bk fileCopy
+
+rm es para borrar
+rm  -i para hacer una confirmación de archivos
+rm -r borarr directorios poco a poco
+
+"Explorando archivos"
+head nos va a mostrar los primeras 10 lienas de un archivos example head principios.txt
+tail Nos muestra las ultimas 10 lineas de un archivo
+less principios.txt nos muetras todo el archivo
+open principios.txt es para abrir comandos 
+xdg open principios.txt lo abribra por ejemplo de desde vsc en linux
+nautilsus Permite abrir todos los archivos
+alias l="l -lh" nosotros podemos creara nuestros comandos pero solo de manera temporal
+ls --help es para perdir ayuda
+ls man
+info cd es para dar infromación
+
+
+"Willcards"
+Las wildcards o comodines nos permiten realizar búsquedas más avanzadas, es aplicable para archivos y directorios.
+ls *.txt "Docuemntos que terminen en txt
+ls datos* "Documentos que se llamen datos"
+ls datos? "buscar que solo tuvieran 1 caracter
+ls datos??? "con 3 caracteres
+ls *html "documentos que terminen en html"
+ls [[:upper]]* "Docuemntos que contengan mayusculas, pero busca dentro de documentos
+ls -d [[:upper]]* "Busca directorios con mayusculas
+ls -d [[lower]]* "Busqueda por minisculas
+ls [ad]* busca con acchivos con a y d
+ls [ai]* buscar por terminanción 
+
+
+"Redireciones"
+ls Pictures "muestro todas mis fotos
+
+ls Pictures > misarchivos.txt " Todas mis fotos las estoy redicreccionando a aun archivo txt
+ls Downloads > misarchivos.txt "En este caso nos sobreescribe
+ls Pictures >>misarchivos.txt "Si se quiere concatenar se debe usar dos veces el signo >"
+
+
+"Redirecciones pipe operator"
+El pipe operator permite enviar la salida de un comando como entrada del siguiente.
+
+echo "Hola platzi" -- Nos genera un estandra output "salida
+cat  ayuda a concatenar un archivo
+
+cowsay "Hola" comando de output
+
+| nos va a permitir hacer varias acciones dentro de nuetra acción
+
+
+
+"Encadenando comandos: operadores de control"
+Los operadores de control permiten ejecutar más de un comando, encadenando los mismos.
+
+"comandos de manera asincrona"
+
+ls; mkdir holi; cal "Se ejutan una por una
+
+"Comandos que no son asincronos"
+
+ls & date & cal "por cada aperson se va a ejecutar en una shell"
+
+mkdir text && cd tezt "si se cumple una acción, se cumple la siguiente
+
+|| operador or " su funcion es crear los comandos
+
+
+
+
+
+
+
+
+
+

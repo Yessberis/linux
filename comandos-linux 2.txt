@@ -1,0 +1,149 @@
+"Permisos"
+Los permisos nos permiten definir de una manera simple y efectiva las reglas de acceso como lectura ( r), escritura (w) o ejecución (x) a determinados archivos o directorios.
+r=4, w=2 y x=1.
+'-' : un archivo normal
+
+d : un directorio
+
+l : un link simbolico
+
+b : un archivo de bloque especial. Son archivos que manejan la información de los bloques de datos como una USB .
+
+chmod "Comando para cambiar permisos
+
+chomd u-r "permisos de lectura
+chmod u-x,go=w "permisos en una liena para ususarios y grupo"
+
+whoami "comandos para saber quien somos"
+su root "nos podemos cambiar de usuario"
+sudo "da los permisos en el usuario"
+
+
+"Varibales de entorno"
+Las variables de entorno permiten pasar información de forma simple, de una aplicación a otra.
+
+
+
+"Comandos de búsqueda"
+Las herramientas de búsqueda de archivos, son de gran utilidad a medida que pasa el tiempo.
+Los podemos usar para buscar archivos log
+
+which "Busca ruta de binarios"
+find "encontrar archivo desde una ruta example  find ./ -name
+find ./ -name.*txt "todos los archivos con txt
+find ./ -type d -name Documents "busca el directorio de documents"
+find ./ -type f -name *.log "buscamos un archivo .log 
+
+
+
+"Comando: grep"
+El comando grep nos permite encontrar texto que contenga un patrón dentro de uno o varios archivos de manera rápid
+
+grep-i Tower movies.csv "buscar todas las lineas que tengas Tower en movies
+
+grep -v tower "para buscar sin esas palabras
+
+
+
+"Utilidades de red"
+ ifconfig // sirve para ver la mascara de red, puerto de transmisión, tarjeta de red, etc
+
+ping // nos muestra si una ip o pagina, esta activa, si salen paquetes es porque hay conexión.
+
+curl pagina_web// podemos traer el html de una pagina, podríamos guardarlo con el estándar output.
+
+wget pagina_web // nos descarga el archivo html, pero con formato.
+
+traceroute pagina_web // nos sirve para ver por cuales computadoras tenemos que ir pasando para llegar por ejemplo a una pagina web. Ejemplo, nos saldrán las ip que tenemos que pasar para llegar a la pagina que queremos.
+
+netstat –i // nos muestra los dispositivos de red.
+
+
+
+"Comprimir archivos"
+ tar -cvf name.tar Carpeta/
+
+
+ tar -cvzf name.tar.gz Carpeta/  "lo puedes usa para archivos planos
+
+
+Descomprimir
+
+tar -xzvf archivo.tar.gz
+
+
+zip -r archivo.zip toComprees(directorio)
+
+unzip toCompress.zip "descomprimido"
+
+
+
+
+MANEJO DE PROCESOS
+
+ps "para correr cuales procesos se estan corriendo
+top "muestra los procesos que estan ocupando mas espacio
+kill "matar unn proceso
+
+
+
+Comando	Función
+vim	Abre el archivo especificado. Si no existe lo crea
+:q	Cierra el editor
+:w	Guarda los cambios
+/[busqueda]	Busca dentro del texto
+dd	En el modo normal, selecciona una línea y la borra
+
+
+
+Personalizar terminal
+
+
+1. Instala Tilix
+Tilix es un emulador de terminal. Para instalarlo:
+
+$ sudo aptinstall tilix
+
+2. Instala ZSH
+Vamos a usar la Shell ZSH. Para cambiarla:
+
+$ sudo aptinstall zsh
+
+Comando para dejar por DEFECTO la shell de bash o zsh:
+
+
+$ chsh -s $(which bash)
+
+$ chsh -s $(which zsh)
+
+(después de cambiar a zsh apretar la opción 0, para crear un archivo .zshrc en blanco)
+
+Para cambiar entre bash y zsh en el momento:
+
+$ exec bash
+
+$ exec zsh
+
+3. Personaliza funcionalidades y colores
+Ahora, puedes ponerle funcionalidades y colores con OH-MY-ZSH
+
+$ sh-c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+4. Usa Power Level
+Vamos a instalarle un tema (powerLevel10K):
+
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+después vamos a entrar al archivo .zshrc:
+
+$ vim ~/.zshrc
+
+buscamos y cambiamos la parte que dice ZSH_THEME por esto:
+
+$ ZSH_THEME="powerlevel10k/powerlevel10k"
+
+Guardamos y salimos.
+
+
+
+
